@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="616.0" prefWidth="813.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ECA_Controller">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="593.0" layoutY="440.0" prefHeight="175.0" prefWidth="220.0" text="Output Interval">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Pane layoutX="-1.0" prefHeight="152.0" prefWidth="241.0">
+                     <children>
+                        <Label layoutX="17.0" layoutY="27.0" text="Crack Growth:" />
+                        <TextField layoutX="98.0" layoutY="23.0" prefHeight="25.0" prefWidth="95.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="593.0" layoutY="279.0" prefHeight="161.0" prefWidth="220.0" text="Geometry Properties">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutY="-2.0" prefHeight="143.0" prefWidth="240.0">
+                     <children>
+                        <Pane prefHeight="48.0" prefWidth="91.0">
+                           <children>
+                              <Label layoutX="38.0" layoutY="16.0" text="Width:" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label layoutX="36.0" layoutY="12.0" text="Thickness:" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <children>
+                              <CheckBox fx:id="check_CSL" layoutX="9.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleCheck" prefHeight="17.0" prefWidth="104.0" text="Crack Size Limit" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="48.0" prefWidth="130.0" GridPane.columnIndex="1">
+                           <children>
+                              <TextField layoutX="-2.0" layoutY="12.0" prefHeight="25.0" prefWidth="83.0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <TextField layoutX="-2.0" layoutY="8.0" prefHeight="25.0" prefWidth="83.0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <TextField fx:id="ECA_txt_CSL" disable="true" layoutX="-1.0" layoutY="4.0" prefHeight="25.0" prefWidth="83.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="120.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="120.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="342.0" prefHeight="279.0" prefWidth="470.0" text="Material Properties">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="-1.0" prefHeight="249.0" prefWidth="470.0">
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="30.0" layoutY="10.0" text="Plane Strain Fracture Toughness:" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="0.0" prefWidth="235.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label layoutX="32.0" layoutY="7.0" text="Poisson's Ratio:" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <children>
+                              <Label layoutX="32.0" layoutY="6.0" text="Upper Limit on R shift:" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                           <children>
+                              <Label layoutX="32.0" layoutY="6.0" text="Lower Limit on R shift:" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                           <children>
+                              <Label layoutX="31.0" layoutY="6.0" text="Coefficient of Thermal Expansion:" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                           <children>
+                              <Label layoutX="31.0" layoutY="7.0" text="Delta K Threshold Value:" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+                           <children>
+                              <Label layoutX="33.0" layoutY="7.0" text="Young's Modulus:" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="7">
+                           <children>
+                              <Label layoutX="34.0" layoutY="6.0" text="Afgrow M:" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <TextField layoutX="6.0" layoutY="5.0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <TextField layoutX="6.0" layoutY="3.0" prefHeight="14.0" prefWidth="149.0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <TextField layoutX="7.0" layoutY="2.0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <TextField layoutX="7.0" layoutY="2.0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                              <TextField layoutX="7.0" layoutY="2.0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <children>
+                              <TextField layoutX="7.0" layoutY="2.0" prefHeight="25.0" prefWidth="149.0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <children>
+                              <TextField layoutX="7.0" layoutY="2.0" prefHeight="25.0" prefWidth="150.0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <children>
+                              <TextField layoutX="7.0" layoutY="2.0" prefHeight="25.0" prefWidth="152.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutY="279.0" prefHeight="336.0" prefWidth="593.0" text="Random Variables">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="331.0" prefWidth="550.0">
+               <children>
+                  <GridPane prefHeight="312.0" prefWidth="595.0">
+                     <children>
+                        <GridPane prefHeight="312.0" prefWidth="453.0">
+                           <children>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="10.0" layoutY="6.0" text="Prob." underline="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <ComboBox fx:id="ECA_combo_probability" layoutX="7.0" layoutY="3.0" prefHeight="25.0" prefWidth="233.0" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <CheckBox fx:id="ECA_check_ac" layoutX="9.0" layoutY="6.0" mnemonicParsing="false" onAction="#handleCheck" text="a/c:" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                 <children>
+                                    <CheckBox fx:id="ECA_check_frac" layoutX="9.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleCheck" text="Fracture Toughness:" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                 <children>
+                                    <CheckBox fx:id="ECA_check_pcL" layoutX="9.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleCheck" text="Paris Constant Log(c):" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                 <children>
+                                    <CheckBox fx:id="ECA_check_pcM" layoutX="9.0" layoutY="6.0" mnemonicParsing="false" onAction="#handleCheck" text="Paris Constant m:" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+                                 <children>
+                                    <CheckBox fx:id="ECA_check_holediameter" layoutX="9.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleCheck" text="Hole Diameter:" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="7">
+                                 <children>
+                                    <CheckBox fx:id="ECA_check_yield" layoutX="9.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleCheck" text="Yield Stress:" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="8">
+                                 <children>
+                                    <CheckBox fx:id="ECA_check_ultimate" layoutX="9.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleCheck" text="Ultimate Stress:" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="9">
+                                 <children>
+                                    <CheckBox fx:id="ECA_check_holeoffset" disable="true" layoutX="9.0" layoutY="3.0" mnemonicParsing="false" onAction="#handleCheck" text="Hole Offset" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label layoutX="35.0" layoutY="7.0" text="Mean" underline="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <TextField layoutX="9.0" layoutY="4.0" prefHeight="25.0" prefWidth="84.0" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <TextField layoutX="9.0" prefHeight="25.0" prefWidth="84.0" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <children>
+                                    <TextField layoutX="9.0" prefHeight="25.0" prefWidth="84.0" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <children>
+                                    <TextField layoutX="9.0" layoutY="1.0" prefHeight="25.0" prefWidth="84.0" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <children>
+                                    <TextField layoutX="9.0" layoutY="2.0" prefHeight="25.0" prefWidth="84.0" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <children>
+                                    <TextField layoutX="9.0" layoutY="1.0" prefHeight="25.0" prefWidth="84.0" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                 <children>
+                                    <TextField alignment="TOP_LEFT" layoutX="9.0" layoutY="2.0" prefHeight="25.0" prefWidth="84.0" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                 <children>
+                                    <TextField layoutX="9.0" layoutY="2.0" prefHeight="25.0" prefWidth="85.0" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                 <children>
+                                    <TextField disable="true" layoutX="9.0" layoutY="1.0" prefHeight="25.0" prefWidth="85.0" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <Label layoutX="-6.0" layoutY="8.0" prefHeight="17.0" prefWidth="105.0" text="Standard Deviation" underline="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <TextField layoutX="1.0" layoutY="4.0" prefHeight="25.0" prefWidth="84.0" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <children>
+                                    <TextField fx:id="ECA_txt_ac" disable="true" layoutX="1.0" layoutY="1.0" prefHeight="25.0" prefWidth="84.0" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <children>
+                                    <TextField fx:id="ECA_txt_frac" disable="true" layoutX="1.0" layoutY="1.0" prefHeight="25.0" prefWidth="84.0" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <children>
+                                    <TextField fx:id="ECA_txt_pcL" disable="true" layoutX="1.0" layoutY="1.0" prefHeight="25.0" prefWidth="84.0" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                 <children>
+                                    <TextField fx:id="ECA_txt_pcM" disable="true" layoutX="2.0" layoutY="2.0" prefHeight="25.0" prefWidth="84.0" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                 <children>
+                                    <TextField fx:id="ECA_txt_holediameter" disable="true" layoutX="2.0" layoutY="1.0" prefHeight="25.0" prefWidth="84.0" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                                 <children>
+                                    <TextField fx:id="ECA_txt_ultimate" disable="true" layoutX="2.0" layoutY="2.0" prefHeight="25.0" prefWidth="84.0" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                                 <children>
+                                    <TextField fx:id="ECA_txt_holeoffset" disable="true" layoutX="2.0" layoutY="1.0" prefHeight="25.0" prefWidth="84.0" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                                 <children>
+                                    <TextField fx:id="ECA_txt_yield" disable="true" layoutX="2.0" layoutY="2.0" prefHeight="25.0" prefWidth="84.0" />
+                                 </children>
+                              </Pane>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="309.0" minWidth="10.0" prefWidth="243.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="101.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.0" minWidth="10.0" prefWidth="88.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <Button fx:id="ECA_btn_prob" disable="true" layoutX="92.0" layoutY="32.0" mnemonicParsing="false" prefHeight="25.0" text="PDF/CDF" />
+                              <Button fx:id="ECA_btn_ac" disable="true" layoutX="92.0" layoutY="63.0" mnemonicParsing="false" prefHeight="25.0" text="PDF/CDF" />
+                              <Button fx:id="ECA_btn_frac" disable="true" layoutX="92.0" layoutY="94.0" mnemonicParsing="false" prefHeight="25.0" text="PDF/CDF" />
+                              <Button fx:id="ECA_btn_pcL" disable="true" layoutX="92.0" layoutY="126.0" mnemonicParsing="false" prefHeight="25.0" text="PDF/CDF" />
+                              <Button fx:id="ECA_btn_pcM" disable="true" layoutX="93.0" layoutY="156.0" mnemonicParsing="false" prefHeight="25.0" text="PDF/CDF" />
+                              <Button fx:id="ECA_btn_holediameter" disable="true" layoutX="93.0" layoutY="187.0" mnemonicParsing="false" prefHeight="25.0" text="PDF/CDF" />
+                              <Button fx:id="ECA_btn_yield" disable="true" layoutX="93.0" layoutY="218.0" mnemonicParsing="false" prefHeight="25.0" text="PDF/CDF" />
+                              <Button fx:id="ECA_btn_ultimate" disable="true" layoutX="93.0" layoutY="247.0" mnemonicParsing="false" prefHeight="25.0" text="PDF/CDF" />
+                              <Button fx:id="ECA_btn_holeoffset" disable="true" layoutX="93.0" layoutY="275.0" mnemonicParsing="false" prefHeight="25.0" text="PDF/CDF" />
+                              <Label disable="true" layoutX="3.0" layoutY="161.0" text="Corr:" />
+                              <TextField disable="true" layoutX="34.0" layoutY="157.0" prefHeight="12.0" prefWidth="51.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="464.0" minWidth="10.0" prefWidth="431.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="281.0" minWidth="10.0" prefWidth="164.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" prefHeight="279.0" prefWidth="342.0" text="Master Curve User Parameters">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="253.0" prefWidth="340.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="43.0" text="Master Curve Toughness:" />
+                  <TextField layoutX="158.0" layoutY="39.0" prefHeight="25.0" prefWidth="121.0" />
+                  <Label layoutX="19.0" layoutY="105.0" text="Afgrow Model:" />
+                  <ComboBox fx:id="ECA_combo_afgrow" layoutX="18.0" layoutY="132.0" prefHeight="25.0" prefWidth="281.0" />
+                  <CheckBox layoutX="122.0" layoutY="183.0" mnemonicParsing="false" text="Show Afgrow" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+   </children>
+</AnchorPane>
